@@ -34,7 +34,8 @@ module.exports = (sequelize: any, DataTypes : any) => {
     static associate(models : any) {
       // define association here
       Pokemon.belongsToMany(models.Type, {
-        through: "PokemonsTypes"
+        through: models.PokemonsTypes,
+        foreignKey: "idPokemon"
       })
     }
   }
