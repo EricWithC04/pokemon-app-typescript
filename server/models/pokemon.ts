@@ -77,6 +77,7 @@ module.exports = (sequelize: any, DataTypes : any) => {
   }, {
     sequelize,
     modelName: 'Pokemon',
+    timestamps: false
   });
   return Pokemon;
 };

@@ -44,6 +44,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
   }, {
     sequelize,
     modelName: 'PokemonsTypes',
+    timestamps: false
   });
   return PokemonsTypes;
 };

@@ -1,8 +1,11 @@
 import { Router } from "express";
-import { firstController } from "../controllers/controllers.routes.ts";
+import { routeCreatePokemon, routeGetAPokemon, routeGetAllPokemons } from "../controllers/controllers.routes.ts";
 
 const router = Router();
 
-router.get("/", firstController)
+router.get("/pokemons", routeGetAllPokemons)
+router.get("/pokemon/:id", routeGetAPokemon)
+router.post("/pokemons", routeCreatePokemon)
+router.get("/types", ()=>{})
 
 export default router;
