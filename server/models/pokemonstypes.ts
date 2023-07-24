@@ -3,10 +3,7 @@ import {
   Model
 } from "sequelize";
 
-interface pokemonsTypesAttributes {
-  idPokemon: string,
-  idType: number
-}
+import { pokemonsTypesAttributes } from "../types";
 
 module.exports = (sequelize: any, DataTypes: any) => {
   class PokemonsTypes extends Model<pokemonsTypesAttributes> 

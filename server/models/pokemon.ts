@@ -1,19 +1,8 @@
 'use strict';
 
 const { Model, UUIDV4 } = require('sequelize');
-// import { Model, UUIDV4 } from "sequelize";
 
-
-interface pokemonAttributes {
-  id: string,
-  name: string,
-  life: number,
-  atk: number,
-  def: number,
-  speed: number,
-  height: number,
-  size: number
-}
+import { pokemonAttributes } from "../types";
 
 module.exports = (sequelize: any, DataTypes : any) => {
   class Pokemon extends Model<pokemonAttributes> 

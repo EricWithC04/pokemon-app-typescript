@@ -1,11 +1,6 @@
 'use strict';
-// const { Model, UUIDV4 } = require("sequelize");
 import { Model } from "sequelize";
-
-interface TypeAttributes {
-  id: number,
-  name: string
-}
+import { TypeAttributes } from "../types";
 
 module.exports = (sequelize: any, DataTypes: any) => {
   class Type extends Model<TypeAttributes> 
